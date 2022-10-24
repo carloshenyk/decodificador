@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Righteous&family=Rubik+Iso&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #d3d3d3;
+}
+main{
+    width: 75vw;
+    margin: auto;
+    height: 80vh;
+}
+main .header{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    font-size: 2rem;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 800;
+    gap: 10px;
+    color: #194F4C;
+}
+main .header img{
+    width: 30px;
+    margin-left: 30px;
+}
+main .conteudo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    column-count: 2;
+    gap: 15px;  /* define o espaço entre as colunas*/
+}
+
+/* CONFIGURAÇÕES DA AREA DE CRIPTOGRAFAR */
+main .conteudo .col-cript{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .conteudo .col-cript .textencriptar{
+    width: 90%;
+    height: 80%;
+    border-radius: 10px;
+    color:#03575c;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+    border: none;
+    
+}
+main .conteudo .col-cript .textencriptar::selection{  /*altera a cor do texto selecionado*/
+    background: #2ff3e0;
+    color: #000000;
+}
+main .conteudo .col-cript ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30vw;
+    padding: 15px;
+}
+
+main .conteudo .col-cript ul button{
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: none;
+    background: #156165;
+    color: #fff;
+    cursor: pointer;
+    margin: 0 10px;
+    font-weight: 700;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+main .conteudo .col-cript .botaoD{
+    background: #dffcfd;
+    border: 1px solid #156165;
+    color: #156165;
+    
+}
+
+main .conteudo .col-cript .botaoD:hover{
+    background: #c50938;
+    border: none;
+    color: #ffff;
+}
+
+/* CONFIGURAÇÕES DA AREA DE MENSAGEM CRIPTOGRAFADA */
+main .conteudo .col-view{
+    width: 28%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+main .conteudo .col-view .textview{
+    width: 90%;
+    height: 85%;
+    border-radius: 10px;
+    color: #055786;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 20px;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.048), 0 6px 20px 0 rgba(0, 0, 0, 0.048);
+    font-family: 'Righteous', cursive;
+}
+
+main .conteudo .col-view .textview::selection{
+    background: #2c145a;
+    color: #ffff;
+}
+
+.col-view .imagem{
+    position: absolute;
+    z-index: 1;
+    top: 20%;
+    text-align: center;
+}
+.col-view .imagem img{
+    width: 150px;
+}
+.col-view .imagem p{
+   
+    max-width:90%;
+    font-size: 20px;
+    font-weight: 800;
+    margin-top: 10px;
+    color:#072c2e8f;
+}
+main .conteudo .col-view ul{
+    list-style: none;
+    display: flex;
+}
+
+main .conteudo .col-view ul #botaoCopia{
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    background: #fff;
+    color:#156165;
+    border-radius: 10px;
+    border: 1px solid #156165;
+    display: none;
+}
+
+main .conteudo .col-view ul button:hover{
+    background: #055786;
+    color:#fff;
+    border: none;
+}
+
+/* CONFIGURAÇÕES DO RODAPE */
+footer{
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer a{
+    color: #156165;
+    font-weight: 900;
+    font-size: 20px;
+    text-decoration: none;
+    font-family: 'Rubik Iso', cursive;
+}
+
+
+/* CONFIGURAÇÕES DA RESPOSIVIDADE */
+
+@media (max-width: 800px ){
+    main{
+        height: 90vh;
+    }
+    main .header{
+        height: 10%;
+    }
+    main .conteudo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 90%;
+    }
+    main .conteudo .col-cript{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 5px;
+    }
+
+    main .conteudo .col-view{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    main .conteudo .col-view ul #botaoCopia{
+       width: 350px;
+       font-size: 18px;
+       font-weight: 700;
+    }
+
+    .col-view .imagem{
+        top: 55%;
+    }
+    .col-view .imagem img{
+        width: 100px;
+    }
+
+    footer{
+        height: 10vh;
+    }
+}
+@media (max-width: 400px ){
+    .col-view .imagem img{
+        display: none;
+    }
+    .col-view .imagem{
+        padding-top: 30%;
+    }
+    .col-view .imagem p{
+        width: 100%;
+        height: 100%;
+        margin: auto;
+    }
+}
